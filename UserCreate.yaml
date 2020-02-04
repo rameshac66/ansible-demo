@@ -1,0 +1,16 @@
+---
+- hosts: all
+  name: Creating new users
+  become: true
+  tasks:
+   - name: Create a login user
+     user:
+      name: disney1
+      password: '$1$Wgd6FI8q$TW3CpfW7rfbz2GvugYNRw0'
+      groups:
+       - apache
+      state: present
+      shell: /bin/bash
+      system: no
+      createhome: yes
+      home: /home/disney1
