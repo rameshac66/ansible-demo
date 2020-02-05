@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: node1
   name: Creating new users
   become: true
   tasks:
