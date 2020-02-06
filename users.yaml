@@ -1,7 +1,6 @@
 ---
 - hosts: all
   name: Creating new users
-  remote_user: ansibleadm
   become: true
   tasks:
    - name: Create a login user
